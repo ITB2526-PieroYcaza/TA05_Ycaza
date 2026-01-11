@@ -1,3 +1,11 @@
+/* ============================= */
+/* Google Fonts */
+/* ============================= */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Just+Sans:wght@300;400;500;600&display=swap');
+
+/* ============================= */
+/* CSS Variables */
+/* ============================= */
 :root{
   --bg: #0f0f10;
   --card: #151518;
@@ -6,122 +14,240 @@
   --border: #2a2a2f;
   --btn: #2a2a2f;
   --btnHover: #3a3a45;
+
+  --font-text: 'Just Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-title: 'JetBrains Mono', monospace;
 }
 
 body.light{
-  --bg:#f6f6f7; --card:#ffffff; --text:#111; --muted:#555; --border:#ddd; --btn:#e7e7e7; --btnHover:#d7d7d7;
+  --bg:#f6f6f7;
+  --card:#ffffff;
+  --text:#111;
+  --muted:#555;
+  --border:#ddd;
+  --btn:#e7e7e7;
+  --btnHover:#d7d7d7;
 }
 
-*{ box-sizing:border-box; }
+/* ============================= */
+/* Base */
+/* ============================= */
+*{
+  box-sizing: border-box;
+}
+
 body{
-  margin:0;
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: var(--font-text);
   background: var(--bg);
   color: var(--text);
+  line-height: 1.6;
 }
 
+/* ============================= */
+/* Typography */
+/* ============================= */
+h1, h2, h3, h4, h5{
+  font-family: var(--font-title);
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  margin-top: 0;
+}
+
+p{
+  margin: 0 0 14px 0;
+}
+
+p:last-child{
+  margin-bottom: 0;
+}
+
+/* ============================= */
+/* Topbar */
+/* ============================= */
 .topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 12px 16px;
   border-bottom: 1px solid var(--border);
   background: var(--card);
 }
 
-.brand{ display:flex; gap:10px; align-items:center; }
+.brand{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: var(--font-title);
+}
+
 .logo{
-  display:inline-flex; align-items:center; justify-content:center;
-  width:32px; height:32px; border:1px solid var(--border); border-radius:8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
 }
 
-.topnav{ display:flex; gap:12px; align-items:center; }
+/* ============================= */
+/* Navigation */
+/* ============================= */
+.topnav{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
 .topnav a{
+  font-family: var(--font-title);
   color: var(--text);
-  text-decoration:none;
-  padding:8px 10px;
-  border:1px solid var(--border);
-  border-radius:10px;
+  text-decoration: none;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
 }
-.topnav a.active{ background: var(--btn); }
 
+.topnav a.active{
+  background: var(--btn);
+}
+
+/* ============================= */
+/* Layout */
+/* ============================= */
 .container{
   max-width: 980px;
   margin: 18px auto;
   padding: 0 14px 40px;
 }
 
-.hero{ margin-bottom: 16px; }
-.grid-2{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-@media (max-width: 700px){
-  .grid-2{ grid-template-columns: 1fr; }
+.hero{
+  margin-bottom: 16px;
 }
 
+.grid-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 700px){
+  .grid-2{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================= */
+/* Cards */
+/* ============================= */
 .card{
   background: var(--card);
-  border:1px solid var(--border);
+  border: 1px solid var(--border);
   border-radius: 14px;
   padding: 16px;
 }
 
-.project-card{ transition: transform .2s ease, border-color .2s ease; }
-.project-card:hover{ transform: scale(1.02); border-color: var(--btnHover); }
-
-.thumb{
-  border:1px dashed var(--border);
-  border-radius: 12px;
-  padding: 26px;
-  margin: 10px 0;
-  color: var(--muted);
-  text-align:center;
+.project-card{
+  transition: transform .2s ease, border-color .2s ease;
 }
-.thumb.big{ padding: 38px; }
 
+.project-card:hover{
+  transform: scale(1.02);
+  border-color: var(--btnHover);
+}
+
+/* ============================= */
+/* Image placeholders */
+/* ============================= */
+
+/* Small images (home, families) */
+.thumb{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.03),
+    rgba(255,255,255,0)
+  );
+}
+
+/* Big images (project pages) */
+.thumb.big{
+  aspect-ratio: 16 / 9;
+  margin: 14px 0;
+  font-size: 0.85rem;
+}
+
+/* ============================= */
+/* Boxes */
+/* ============================= */
 .box{
-  border:1px solid var(--border);
+  border: 1px solid var(--border);
   border-radius: 14px;
   padding: 14px;
 }
 
+/* ============================= */
+/* Buttons */
+/* ============================= */
 .btn, .btn-icon{
   background: var(--btn);
   color: var(--text);
-  border:1px solid var(--border);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 10px 12px;
-  cursor:pointer;
+  cursor: pointer;
+  font-family: var(--font-title);
 }
-.btn:hover, .btn-icon:hover{ background: var(--btnHover); }
 
-.form-row{ margin-bottom: 12px; display:flex; flex-direction:column; gap:6px; }
-input, textarea, .input{
+.btn:hover, .btn-icon:hover{
+  background: var(--btnHover);
+}
+
+/* ============================= */
+/* Forms */
+/* ============================= */
+.form-row{
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+input, textarea{
+  font-family: var(--font-text);
   background: transparent;
   color: var(--text);
-  border:1px solid var(--border);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 10px;
 }
-.error{ color: #ff6b6b; min-height: 16px; }
-.success{ color: #67ff9a; }
 
-.footer{
-  border-top: 1px solid var(--border);
-  padding: 12px 16px;
-  display:flex;
-  justify-content:space-between;
-  color: var(--muted);
-  background: var(--card);
+.error{
+  color: #ff6b6b;
+  min-height: 16px;
 }
 
-/* Panel lateral derecho */
+.success{
+  color: #67ff9a;
+}
+
+/* ============================= */
+/* Side panel */
+/* ============================= */
 .sidepanel{
   position: fixed;
-  top:0;
-  right:0;
+  top: 0;
+  right: 0;
   width: 260px;
   height: 100vh;
   background: var(--card);
@@ -131,36 +257,14 @@ input, textarea, .input{
   padding: 12px;
   z-index: 1000;
 }
-.sidepanel.open{ transform: translateX(0); }
 
-.sidepanel-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+.sidepanel.open{
+  transform: translateX(0);
 }
-.sidepanel-list{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
-.sidepanel-list a{
-  display:block;
-  padding:10px;
-  border:1px solid var(--border);
-  border-radius: 12px;
-  text-decoration:none;
-  color: var(--text);
-}
-.sidepanel-list a:hover{ background: var(--btnHover); }
-
-.project-list{ margin-top: 12px; }
-.project-list li{ margin: 8px 0; }
-.project-list a{ color: var(--text); }
 
 /* ============================= */
-/* Projects page – family layout */
+/* Projects – family layout */
 /* ============================= */
-
 .family-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -186,9 +290,28 @@ input, textarea, .input{
 
 .mini-project h3{
   margin: 0 0 6px 0;
+  font-family: var(--font-title);
 }
 
 .mini-project p{
   margin: 0 0 10px 0;
   color: var(--muted);
+}
+
+/* ============================= */
+/* Footer */
+/* ============================= */
+.footer{
+  border-top: 1px solid var(--border);
+  padding: 16px;
+  background: var(--card);
+  color: var(--muted);
+  text-align: center;
+}
+
+.footer-info{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
 }

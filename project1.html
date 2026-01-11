@@ -21,29 +21,79 @@
 
 <main class="container">
   <section class="card">
-    <h1>Projecte 1</h1>
-    <p><strong>Resumen:</strong> explica aquí qué has hecho, objetivo y tecnologías.</p>
+    <h1>Remote Management of Linux and Windows Servers</h1>
+
 
     <div class="grid-2">
       <div class="box">
-        <h2>Project explanation</h2>
-        <p>
-          Aquí describes el proyecto: qué problema resuelve, qué aprendiste,
-          y qué partes implementaste (HTML/CSS/JS, etc.).
-        </p>
-      </div>
+     <h2>Project explanation</h2>
+
+  <p>
+    This project arises from the need to manage mixed infrastructures from a single control point,
+    reducing dependency on manual access to each server. It is designed for professional environments
+    where Linux and Windows servers coexist with different roles and levels of criticality.
+  </p>
+
+  <p>
+    The solution allows remote command execution, application of standardized configurations,
+    software installation and updates, service and system restarts, and operational state validation
+    in a centralized manner.
+  </p>
+
+  <p>
+    Priority was given to consistency, security, and traceability of actions, ensuring that every
+    intervention is logged and reproducible across environments. The project also aims to minimize
+    human error and speed up routine maintenance tasks for system administrators.
+  </p>
+
+  <p>
+    The project was structured into several well-defined layers to separate responsibilities and
+    simplify maintenance. First, secure remote access to Linux servers was established using SSH with
+    public key authentication, disabling insecure access methods.
+  </p>
+
+  <p>
+    For Windows systems, PowerShell Remoting was configured, adjusting execution policies and
+    permissions to ensure controlled access. Ansible was used as the main automation tool for Linux
+    environments, creating modular and reusable playbooks for common tasks.
+  </p>
+
+  <p>
+    Python was used as an orchestration language to coordinate task execution, validate pre- and
+    post-states, and handle errors. A server inventory was designed to classify nodes by environment,
+    operating system, and role.
+  </p>
+
+  <p>
+    Basic error handling and rollback mechanisms were implemented to prevent inconsistent states.
+    Finally, all operational procedures were documented and tested across different scenarios.
+  </p>
+
+  <p>
+    This project demonstrates the value of automation in modern system administration. It
+    significantly reduces manual intervention time, improves configuration consistency, facilitates
+    infrastructure scalability, and provides a solid foundation for more complex enterprise
+    environments.
+  </p>
+</div>
       <div class="box">
         <h2>Reference images</h2>
         <div class="thumb big">IMAGEN / CAPTURA</div>
         <div class="thumb big">IMAGEN / CAPTURA</div>
+          <div class="thumb big">IMAGEN / CAPTURA</div>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="footer">
-  <div>© 2025</div>
+  <div class="footer-info">
+    <div>© 2026</div>
+    <div>Piero Ycaza</div>
+    <div>All rights reserved</div>
+  </div>
 </footer>
+
 
 <script src="script.js"></script>
 </body>

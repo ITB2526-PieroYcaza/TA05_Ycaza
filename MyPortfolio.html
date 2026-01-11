@@ -20,7 +20,7 @@
 
     <!-- Botón panel derecho -->
     <button id="projects-toggle" class="btn-icon" type="button" aria-controls="projects-panel" aria-expanded="false">
-      ⋮ Projectes
+      ⋮ Projects
     </button>
   </nav>
 </header>
@@ -28,37 +28,37 @@
 <!-- Panel lateral derecho (sale desde la derecha) -->
 <aside id="projects-panel" class="sidepanel" aria-hidden="true">
   <div class="sidepanel-header">
-    <h2>Projectes</h2>
+    <h2>Projects</h2>
     <button id="projects-close" class="btn-icon" type="button">✕</button>
   </div>
   <ul class="sidepanel-list">
-    <li><a href="project1.html">Projecte 1</a></li>
-    <li><a href="project2.html">Projecte 2</a></li>
-    <li><a href="projects.html">Tots els projectes</a></li>
+    <li><a href="project1.html">Project 1</a></li>
+    <li><a href="project2.html">Project 2</a></li>
+    <li><a href="projects.html">All projects</a></li>
   </ul>
 </aside>
 
 <main class="container">
 
   <section class="hero">
-    <h1>Benvingut/da al meu portfolio</h1>
-    <p>Aquesta pàgina mostra 2 projectes destacats i un formulari de contacte.</p>
-    <button id="theme-btn" class="btn" type="button">Mode fosc</button>
+    <h1>Welcome To My Portfolio</h1>
+    <p>This page shows two featured projects and a contact form.</p>
+    <button id="theme-btn" class="btn" type="button">Dark mode</button>
   </section>
 
   <section class="grid-2">
     <article class="card project-card">
-      <h2>Featured Project 1</h2>
+      <h2>Featured Project 1: Remote Management of Linux and Windows Servers</h2>
       <div class="thumb">LINK WITH PHOTO PROJECT 1</div>
-      <p>Descripció breu del projecte 1.</p>
-      <a class="btn" href="project1.html">Veure projecte</a>
+      <p>Centralized platform for remote administration of Linux and Windows servers, focused on executing administrative tasks, software deployments, and maintenance without requiring physical access to systems.</p>
+      <a class="btn" href="project1.html">View</a>
     </article>
 
     <article class="card project-card">
-      <h2>Featured Project 2</h2>
+      <h2>Featured Project 2: Remote Infrastructure Monitoring and Alerts</h2>
       <div class="thumb">LINK WITH PHOTO PROJECT 2</div>
-      <p>Descripció breu del projecte 2.</p>
-      <a class="btn" href="project2.html">Veure projecte</a>
+      <p>Centralized monitoring system designed to supervise the status, performance, and availability of servers and critical services, with automatic alert generation in case of incidents.</p>
+        <a class="btn" href="project2.html">View</a>
     </article>
   </section>
 
@@ -68,23 +68,23 @@
     <form id="contact-form" novalidate>
       <div class="form-row">
         <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Tu nombre" />
+        <input id="name" name="name" type="text" placeholder="Your name" />
         <small class="error" id="name-error"></small>
       </div>
 
       <div class="form-row">
         <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="tu@email.com" />
+        <input id="email" name="email" type="email" placeholder="your@email.com" />
         <small class="error" id="email-error"></small>
       </div>
 
       <div class="form-row">
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje..."></textarea>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message..."></textarea>
         <small class="error" id="message-error"></small>
       </div>
 
-      <button class="btn" type="submit">Enviar</button>
+      <button class="btn" type="submit">OK</button>
       <p class="success" id="form-success"></p>
     </form>
   </section>
@@ -92,9 +92,13 @@
 </main>
 
 <footer class="footer">
-  <div>Social networks</div>
-  <div>Info text</div>
+  <div class="footer-info">
+    <div>© 2026</div>
+    <div>Piero Ycaza</div>
+    <div>All rights reserved</div>
+  </div>
 </footer>
+
 
 <script src="script.js"></script>
 </body>
