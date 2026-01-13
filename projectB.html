@@ -1,64 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Project B</title>
-  <link rel="stylesheet" href="styles.css" />
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1"/>
+ <title>Project B</title>
+ <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+
 <header class="topbar">
-  <div class="brand">
-    <span class="logo">MP</span>
-    <span>My Project Portfolio</span>
-  </div>
-  <nav class="topnav">
-    <a href="index.html">HOME</a>
-    <a href="projects.html">PROJECTS</a>
-  </nav>
+ <div class="brand">
+   <span class="logo">MP</span>
+   <span>My Project Portfolio</span>
+ </div>
+
+
+ <nav class="topnav">
+   <a href="index.html">HOME</a>
+   <a href="projects.html">PROJECTS</a>
+
+
+   <button
+     id="projects-toggle"
+     class="btn-icon"
+     type="button"
+     aria-controls="projects-panel"
+     aria-expanded="false">
+     ⋮ Projects
+   </button>
+ </nav>
 </header>
 
+
+<aside id="projects-panel" class="sidepanel" aria-hidden="true">
+ <div class="sidepanel-header">
+   <h2>Projects</h2>
+   <button id="projects-close" class="btn-icon" type="button">✕</button>
+ </div>
+
+
+ <ul class="sidepanel-list">
+   <li><a href="project1.html">Project 1</a></li>
+   <li><a href="project2.html">Project 2</a></li>
+   <li><a href="projects.html">All projects</a></li>
+ </ul>
+</aside>
+
+
+
+
 <main class="container">
-  <section class="card">
-    <h1>Server Security Audit</h1>
-    <p><strong>Resumen:</strong> descripción provisional del proyecto.</p>
+ <section class="card">
+   <h1>Server Security Audit</h1>
+   <p><strong>Resumen:</strong> descripción provisional del proyecto.</p>
 
-    <div class="grid-2">
-      <div class="box">
-        <h2>Project explanation</h2>
-         <p>
+
+   <div class="grid-2">
+     <div class="box">
+       <h2>Project explanation</h2>
+        <p>
 This project aims to identify security weaknesses in servers through systematic and automated analysis. It is designed for environments that require periodic compliance and best-practice reviews. The tool evaluates system configurations, running services, file permissions, and security policies. Results help prioritize corrective actions and improve overall security posture.
-  </p>
+ </p>
 
-  <p>
+
+ <p>
 Specialized tools such as Lynis and OpenSCAP were integrated for Linux system audits. For Windows, PowerShell scripts were developed to review key configurations. Audit profiles were defined for different environments. Analyses were executed automatically on a scheduled basis. Detailed reports were generated in administrator-friendly formats. Findings were classified by severity level. Mitigation recommendations were documented for each issue. Critical results were manually validated. The system was prepared for future extensions and additional controls.
-  </p>
+ </p>
 
-  <p>
-Periodic audits strengthen infrastructure security. They help detect insecure configurations before exploitation. They facilitate compliance with internal standards. They reduce the attack surface. They improve operational maturity.
-  </p>
 
-      </div>
+ <p>
+Periodic audits strengthen infrastructure, security. They help detect insecure configurations before exploitation. They facilitate compliance with internal standards. They reduce the attack surface. They improve operational maturity.
+ </p>
 
-      <div class="box">
-        <h2>Reference images</h2>
-        <img src="imagenes/10.png" class="thumb big" alt="Project B image 1">
-        <img src="imagenes/11.png" class="thumb big" alt="Project B image 2">
-      </div>
-    </div>
-  </section>
+
+     </div>
+
+
+     <div class="box">
+       <h2>Reference images</h2>
+       <img src="imagenes/10.png" class="thumb big" alt="Project B image 1">
+       <img src="imagenes/11.png" class="thumb big" alt="Project B image 2">
+     </div>
+   </div>
+ </section>
 </main>
 
+
 <footer class="footer">
-  <div class="footer-info">
-    <div>© 2026</div>
-    <div>Piero Ycaza</div>
-    <div>All rights reserved</div>
-  </div>
+ <div class="footer-info">
+   <div>© 2026</div>
+   <div>Piero Ycaza</div>
+   <div>All rights reserved</div>
+ </div>
 </footer>
+
+
 
 
 <script src="script.js"></script>
 </body>
 </html>
+

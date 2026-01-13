@@ -1,64 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Project A</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project A</title>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+
+
+
 <header class="topbar">
-  <div class="brand">
-    <span class="logo">MP</span>
-    <span>My Project Portfolio</span>
-  </div>
-  <nav class="topnav">
-    <a href="index.html">HOME</a>
-    <a href="projects.html">PROJECTS</a>
-  </nav>
+<div class="brand">
+  <span class="logo">MP</span>
+  <span>My Project Portfolio</span>
+</div>
+>
+
+
+ <nav class="topnav">
+   <a href="index.html">HOME</a>
+   <a href="projects.html">PROJECTS</a>
+
+
+   <button
+     id="projects-toggle"
+     class="btn-icon"
+     type="button"
+     aria-controls="projects-panel"
+     aria-expanded="false">
+     ⋮ Projects
+   </button>
+ </nav>
 </header>
 
+
+<aside id="projects-panel" class="sidepanel" aria-hidden="true">
+ <div class="sidepanel-header">
+   <h2>Projects</h2>
+   <button id="projects-close" class="btn-icon" type="button">✕</button>
+ </div>
+
+
+ <ul class="sidepanel-list">
+   <li><a href="project1.html">Project 1</a></li>
+   <li><a href="project2.html">Project 2</a></li>
+   <li><a href="projects.html">All projects</a></li>
+ </ul>
+</aside>
+
+
 <main class="container">
-  <section class="card">
-    <h1>Automated Backup Policy</h1>
+<section class="card">
+  <h1>Automated Backup Policy</h1>
 
+  <div class="grid-2">
+    <div class="box">
+      <h2>Project explanation</h2>
+       <p>
+This project, defines a comprehensive data protection strategy aimed at professional environments. Its main objective is to ensure availability and recovery of critical information in the event of failures, human error, or security incidents. The system performs periodic backups automatically, minimizing manual intervention. Different restoration scenarios and data integrity verification processes are considered.
+</p>
 
-    <div class="grid-2">
-      <div class="box">
-        <h2>Project explanation</h2>
-         <p>
-This project defines a comprehensive data protection strategy aimed at professional environments. Its main objective is to ensure availability and recovery of critical information in the event of failures, human error, or security incidents. The system performs periodic backups automatically, minimizing manual intervention. Different restoration scenarios and data integrity verification processes are considered.
-  </p>
-
-  <p>
+<p>
 Bash scripts were designed for Linux servers using rsync, applying exclusion and versioning policies. For Windows environments, PowerShell scripts were developed to interact with shared resources via SMB. Scheduled tasks were configured to execute backups during controlled time windows. A detailed logging system was implemented for each execution. Storage usage was optimized through incremental backups. Periodic restoration tests were performed. Disaster recovery procedures were documented. Basic failure notifications were added. The system was tested across multiple environments before final validation.
-  </p>
+</p>
 
-  <p>
+<p>
 Automated backups are a key component of business continuity. They reduce operational risks. They increase system resilience. They facilitate recovery from incidents. They are essential in any serious infrastructure.
-  </p>
+</p>
 
-      </div>
 
-      <div class="box">
-        <h2>Reference images</h2>
-        <img src="imagenes/7.png" class="thumb big" alt="Project A image 1">
-        <img src="imagenes/8.png" class="thumb big" alt="Project A image 2">
-      </div>
     </div>
-  </section>
+
+
+    <div class="box">
+      <h2>Reference images</h2>
+      <img src="imagenes/7.png" class="thumb big" alt="Project A image 1">
+      <img src="imagenes/8.png" class="thumb big" alt="Project A image 2">
+    </div>
+  </div>
+</section>
 </main>
 
+
+
+
 <footer class="footer">
-  <div class="footer-info">
-    <div>© 2026</div>
-    <div>Piero Ycaza</div>
-    <div>All rights reserved</div>
-  </div>
+<div class="footer-info">
+  <div>© 2026</div>
+  <div>Piero Ycaza</div>
+  <div>All rights reserved</div>
+</div>
+</footer>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
+ooter class="footer">
+ <div class="footer-info">
+   <div>© 2026</div>
+   <div>Piero Ycaza</div>
+   <div>All rights reserved</div>
+ </div>
 </footer>
 
 
 <script src="script.js"></script>
 </body>
 </html>
+

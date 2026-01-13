@@ -1,67 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Proyecto 2</title>
-  <link rel="stylesheet" href="styles.css" />
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1"/>
+ <title>Proyecto 2</title>
+ <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+
 <header class="topbar">
-  <div class="brand">
-    <span class="logo">MP</span>
-    <span>My Project Portfolio</span>
-  </div>
-  <nav class="topnav">
-    <a href="index.html">HOME</a>
-    <a href="projects.html">PROJECTS</a>
-  </nav>
+ <div class="brand">
+   <span class="logo">MP</span>
+   <span>My Project Portfolio</span>
+ </div>
+
+
+ <nav class="topnav">
+   <a href="index.html">HOME</a>
+   <a href="projects.html">PROJECTS</a>
+
+
+   <button
+     id="projects-toggle"
+     class="btn-icon"
+     type="button"
+     aria-controls="projects-panel"
+     aria-expanded="false">
+     ⋮ Projects
+   </button>
+ </nav>
 </header>
 
+
+<aside id="projects-panel" class="sidepanel" aria-hidden="true">
+ <div class="sidepanel-header">
+   <h2>Projects</h2>
+   <button id="projects-close" class="btn-icon" type="button">✕</button>
+ </div>
+
+
+ <ul class="sidepanel-list">
+   <li><a href="project1.html">Project 1</a></li>
+   <li><a href="project2.html">Project 2</a></li>
+   <li><a href="projects.html">All projects</a></li>
+ </ul>
+</aside>
+>
+
+
 <main class="container">
-  <section class="card">
-    <h1>Remote Infrastructure Monitoring and Alerts.</h1>
+ <section class="card">
+   <h1>Remote Infrastructure Monitoring and Alerts.</h1>
 
 
-    <div class="grid-2">
-      <div class="box">
-        <h2>Project explanation</h2>
+
+
+   <div class="grid-2">
+     <div class="box">
+       <h2>Project explanation</h2>
+        <p>
+           This project focuses on providing full visibility into the health of an IT infrastructure. It is aimed at environments where early fault detection is essential to ensure service continuity. The system monitors resources such as CPU, memory, disk, network usage, service availability, and response times. Collected information is presented clearly through dashboards, facilitating operational decision-making. Additionally, an alerting system was implemented to automatically notify administrators when defined thresholds are exceeded.
+        </p>
+
+
          <p>
-            This project focuses on providing full visibility into the health of an IT infrastructure. It is aimed at environments where early fault detection is essential to ensure service continuity. The system monitors resources such as CPU, memory, disk, network usage, service availability, and response times. Collected information is presented clearly through dashboards, facilitating operational decision-making. Additionally, an alerting system was implemented to automatically notify administrators when defined thresholds are exceeded.
-         </p>
+       Monitoring agents were deployed on servers to collect operating system and service metrics. Prometheus was used to capture real-time metrics, while Zabbix complemented monitoring through periodic checks. Grafana was configured as the main visualization tool, creating dashboards tailored to server type and environment. Alertmanager was integrated to define alert rules based on critical conditions and thresholds. Python scripts were developed to process special events and enrich notifications. Alerts were sent via email and messaging systems. Failure simulations were conducted to validate system effectiveness. The architecture and maintenance procedures were fully documented.
+        </p>
 
-          <p>
-        Monitoring agents were deployed on servers to collect operating system and service metrics. Prometheus was used to capture real-time metrics, while Zabbix complemented monitoring through periodic checks. Grafana was configured as the main visualization tool, creating dashboards tailored to server type and environment. Alertmanager was integrated to define alert rules based on critical conditions and thresholds. Python scripts were developed to process special events and enrich notifications. Alerts were sent via email and messaging systems. Failure simulations were conducted to validate system effectiveness. The architecture and maintenance procedures were fully documented.
-         </p>
 
-         <p>
-            Proactive monitoring is essential for critical infrastructures. It allows issues to be detected before they impact users. It reduces mean time to resolution of incidents. It improves overall system stability. It provides operational confidence to the technical team.
-         </p>
+        <p>
+           Proactive monitoring is essential, for critical infrastructures. It allows issues to be detected before they impact users. It reduces mean time to resolution of incidents. It improves overall system stability. It provides operational confidence to the technical team.
+        </p>
 
 
 
-      </div>
-      <div class="box">
-        <h2>Reference images</h2>
-          <img src="imagenes/4.png" class="thumb big" alt="Project 2 image 1">
-        <img src="imagenes/5.png" class="thumb big" alt="Project 2 image 2">
-        <img src="imagenes/6.png" class="thumb big" alt="Project 2 image 3">
-      </div>
-    </div>
-  </section>
+
+
+
+     </div>
+     <div class="box">
+       <h2>Reference images</h2>
+         <img src="imagenes/4.png" class="thumb big" alt="Project 2 image 1">
+       <img src="imagenes/5.png" class="thumb big" alt="Project 2 image 2">
+       <img src="imagenes/6.png" class="thumb big" alt="Project 2 image 3">
+     </div>
+   </div>
+ </section>
 </main>
 
+
 <footer class="footer">
-  <div class="footer-info">
-    <div>© 2026</div>
-    <div>Piero Ycaza</div>
-    <div>All rights reserved</div>
-  </div>
+ <div class="footer-info">
+   <div>© 2026</div>
+   <div>Piero Ycaza</div>
+   <div>All rights reserved</div>
+ </div>
 </footer>
+
 
 <script src="script.js"></script>
 </body>
 </html>
+
 
 

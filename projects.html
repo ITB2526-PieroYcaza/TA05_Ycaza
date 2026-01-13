@@ -1,139 +1,394 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Projects</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projects</title>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+
 <header class="topbar">
-  <div class="brand">
-    <span class="logo">MP</span>
-    <span>My Project Portfolio</span>
-  </div>
-  <nav class="topnav">
-    <a href="index.html">HOME</a>
-    <a class="active" href="projects.html">PROJECTS</a>
-  </nav>
+<div class="brand">
+  <span class="logo">MP</span>
+  <span>My Project Portfolio</span>
+</div>
+
+
+<nav class="topnav">
+  <a href="index.html">HOME</a>
+  <a href="projects.html">PROJECTS</a>
+
+
+  <button
+    id="projects-toggle"
+    class="btn-icon"
+    type="button"
+    aria-controls="projects-panel"
+    aria-expanded="false">
+    ⋮ Projects
+  </button>
+</nav>
 </header>
+
+
+
+
+<aside id="projects-panel" class="sidepanel" aria-hidden="true">
+<div class="sidepanel-header">
+  <h2>Projects</h2>
+  <button id="projects-close" class="btn-icon" type="button">✕</button>
+</div>
+
+
+
+
+<ul class="sidepanel-list">
+  <li><a href="project1.html">Project 1</a></li>
+  <li><a href="project2.html">Project 2</a></li>
+  <li><a href="projects.html">All projects</a></li>
+</ul>
+</aside>
+
 
 <main class="container">
 
-  <section class="card">
-    <h1>Projects</h1>
-    <p>List of projects organised by families.</p>
-  </section>
 
-  <!-- FAMILY 1 -->
-  <section class="card">
-    <h2>Security and Backups</h2>
+<section class="card">
+  <h1>Projects</h1>
+  <p>List with 24 projects organised by families.</p>
+</section>
 
-    <div class="family-grid">
-      <a href="projectA.html" class="mini-project">
-        <h3>Automated Backup Policy</h3>
-        <p>Automated incremental backup system for Linux and Windows servers, centralized on secure and controlled storage.</p>
-        <img src="imagenes/9.png" class="thumb" alt="project A">
-      </a>
 
-      <a href="projectB.html" class="mini-project">
-        <h3>Server Security Audit</h3>
-        <p>Audit tool designed to evaluate security configurations, permissions, and services on Linux and Windows, more operative systems servers.</p>
-        <img src="imagenes/12.png" class="thumb" alt="project A">
-      </a>
+<!-- FAMILY 1 -->
+<section class="card">
+  <h2>Security and Backups</h2>
+
+  <div class="family-grid">
+    <a href="projectA.html" class="mini-project">
+      <h3>Automated Backup Policy</h3>
+      <p>Automated incremental, backup system for Linux and Windows servers, centralized on secure and controlled storage.</p>
+      <img src="imagenes/9.png" class="thumb" alt="project A">
+    </a>
+
+
+
+
+    <a href="projectB.html" class="mini-project">
+      <h3>Server Security Audit</h3>
+      <p>Audit tool designed to evaluate security configurations, permissions, and services on Linux and Windows, more operative systems servers.</p>
+      <img src="imagenes/12.png" class="thumb" alt="project A">
+    </a>
+  </div>
+</section>
+
+
+
+
+<!-- FAMILY 2 -->
+<section class="card">
+  <h2>Virtualization and Containers</h2>
+
+
+  <div class="family-grid">
+    <div class="mini-project">
+      <h3>Proxmox Virtualization Cluster</h3>
+      <p>Implementation of a high-availability virtualization cluster that keeps services running even in case of hardware failures.</p>
+      <img src="imagenes/13.png" class="thumb" alt="project A">
     </div>
-  </section>
 
-  <!-- FAMILY 2 -->
-  <section class="card">
-    <h2>Virtualization and Containers</h2>
 
-    <div class="family-grid">
-      <div class="mini-project">
-        <h3>Proxmox Virtualization Cluster</h3>
-        <p>Implementation of a high-availability virtualization cluster that keeps services running even in case of hardware failures.</p>
-        <img src="imagenes/13.png" class="thumb" alt="project A">
-      </div>
 
-      <div class="mini-project">
-        <h3>Containers for Web Applications</h3>
-        <p>Containerization of web applications for fast, reproducible, and isolated deployments across environments.</p>
-        <img src="imagenes/14.png" class="thumb" alt="project A">
-      </div>
+
+    <div class="mini-project">
+      <h3>Containers for Web Applications</h3>
+      <p>Containerization of web applications for fast, reproducible, and isolated deployments across environments.</p>
+      <img src="imagenes/14.png" class="thumb" alt="project A">
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FAMILY 3 -->
-  <section class="card">
-    <h2>Networks and Connectivity</h2>
 
-    <div class="family-grid">
-      <div class="mini-project">
-        <h3>Secure Corporate VPN</h3>
-        <p>Encrypted VPN solution that provides secure remote access to the corporate internal network.</p>
-        <img src="imagenes/15.png" class="thumb" alt="project A">
-      </div>
 
-      <div class="mini-project">
-        <h3>Network Traffic Monitor</h3>
-        <p>Network traffic analysis system designed to detect bottlenecks and anomalous behavior.</p>
-        <img src="imagenes/16.png" class="thumb" alt="project A">
-      </div>
+
+<!-- FAMILY 3 -->
+<section class="card">
+  <h2>Networks and Connectivity</h2>
+
+
+
+
+  <div class="family-grid">
+    <div class="mini-project">
+      <h3>Secure Corporate VPN</h3>
+      <p>Encrypted VPN solution that provides secure remote access to the corporate internal network.</p>
+      <img src="imagenes/15.png" class="thumb" alt="project A">
     </div>
-  </section>
 
-  <!-- FAMILY 4 -->
-  <section class="card">
-    <h2>Automation and Scripting</h2>
 
-    <div class="family-grid">
-      <div class="mini-project">
-        <h3>Windows Task Automation</h3>
-        <p>Automation of repetitive administrative tasks in Windows environments using PowerShell scripts.</p>
-        <img src="imagenes/17.png" class="thumb" alt="project A">
-      </div>
 
-      <div class="mini-project">
-        <h3>Initial Server Configuration</h3>
-        <p>Provisioning script that prepares new servers following predefined standards.</p>
-        <img src="imagenes/18.png" class="thumb" alt="project A">
-      </div>
+
+    <div class="mini-project">
+      <h3>Network Traffic Monitor</h3>
+      <p>Network traffic analysis system designed to detect bottlenecks and anomalous behavior.</p>
+      <img src="imagenes/16.png" class="thumb" alt="project A">
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FAMILY 5 -->
-  <section class="card">
-    <h2>Application Monitoring</h2>
 
-    <div class="family-grid">
-      <div class="mini-project">
-        <h3>Web Services Status Dashboard</h3>
-        <p>Visual panel displaying status, uptime, and performance of internal web services.</p>
-        <img src="imagenes/19.png" class="thumb" alt="project A">
-      </div>
 
-      <div class="mini-project">
-        <h3>Automatic Log Error Alerts</h3>
-        <p>System that analyzes application logs and generates alerts when critical errors are detected.</p>
-        <img src="imagenes/20.png" class="thumb" alt="project A">
-      </div>
+
+<!-- FAMILY 4 -->
+<section class="card">
+  <h2>Automation and Scripting</h2>
+
+
+  <div class="family-grid">
+    <div class="mini-project">
+      <h3>Windows Task Automation</h3>
+      <p>Automation of repetitive administrative tasks in Windows environments using PowerShell scripts.</p>
+      <img src="imagenes/17.png" class="thumb" alt="project A">
     </div>
-  </section>
+
+
+    <div class="mini-project">
+      <h3>Initial Server Configuration</h3>
+      <p>Provisioning script that prepares new servers following predefined standards.</p>
+      <img src="imagenes/18.png" class="thumb" alt="project A">
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- FAMILY 5 -->
+<section class="card">
+  <h2>Application Monitoring</h2>
+
+
+
+
+  <div class="family-grid">
+    <div class="mini-project">
+      <h3>Web Services Status Dashboard</h3>
+      <p>Visual panel displaying status, uptime, and performance of internal web services.</p>
+      <img src="imagenes/19.png" class="thumb" alt="project A">
+    </div>
+
+
+
+
+    <div class="mini-project">
+      <h3>Automatic Log Error Alerts</h3>
+      <p>System that analyzes application logs and generates alerts when critical errors are detected.</p>
+      <img src="imagenes/20.png" class="thumb" alt="project A">
+    </div>
+  </div>
+</section>
+
+
+<!-- FAMILY 6 -->
+<section class="card">
+  <h2>Backup and Disaster Recovery</h2>
+
+
+
+
+  <div class="family-grid">
+    <div class="mini-project">
+      <h3>Disaster Recovery Plan Simulation</h3>
+      <p>Design and implementation of a centralized backup system to protect critical servers and data across multiple environments</p>
+      <img src="imagenes/1.png" class="thumb" alt="project A">
+    </div>
+
+
+
+
+    <div class="mini-project">
+      <h3>Centralized Backup Strategy</h3>
+      <p>Simulation of disaster recovery scenarios to validate data restoration procedures and recovery time objectives (RTO).</p>
+      <img src="imagenes/10.png" class="thumb" alt="project A">
+    </div>
+  </div>
+</section>
+
+
+<!-- FAMILY 7 -->
+<section class="card">
+  <h2>Security and Hardening</h2>
+
+
+
+
+  <div class="family-grid">
+    <div class="mini-project">
+      <h3>Linux Server Hardening</h3>
+      <p>Security hardening of Linux servers by applying best practices, reducing attack surface, and enforcing strict access controls.</p>
+      <img src="imagenes/9.png" class="thumb" alt="project A">
+    </div>
+
+
+
+
+    <div class="mini-project">
+      <h3>Vulnerability Assessment Automation</h3>
+      <p>Automated vulnerability scanning process to identify and report security weaknesses in infrastructure components.</p>
+      <img src="imagenes/2.png" class="thumb" alt="project A">
+    </div>
+  </div>
+</section>
+
+
+<!-- FAMILY 8 -->
+<section class="card">
+  <h2>Databases and Storage</h2>
+
+
+
+
+  <div class="family-grid">
+    <div class="mini-project">
+      <h3>High Availability Database Setup</h3>
+      <p>Deployment of a high-availability database architecture to ensure data consistency and service continuity.</p>
+      <img src="imagenes/3.png" class="thumb" alt="project A">
+    </div>
+
+
+
+
+    <div class="mini-project">
+      <h3>Centralized Storage Server</h3>
+      <p>Implementation of a centralized storage solution for shared access, backups, and virtual machine disks.</p>
+      <img src="imagenes/4.png" class="thumb" alt="project A">
+    </div>
+  </div>
+</section>
+
+
+<!-- FAMILY 9 -->
+<section class="card">
+  <h2>Cloud and Hybrid Infrastructure</h2>
+
+
+
+
+  <div class="family-grid">
+    <div class="mini-project">
+      <h3>Hybrid Cloud Integration</h3>
+      <p>Integration of on-premise infrastructure with cloud services to extend scalability and redundancy.</p>
+      <img src="imagenes/7.png" class="thumb" alt="project A">
+    </div>
+
+
+
+
+    <div class="mini-project">
+      <h3>Cloud Resource Cost Monitoring</h3>
+      <p>Monitoring solution to track cloud resource usage and optimize operational costs.</p>
+      <img src="imagenes/15.png" class="thumb" alt="project A">
+    </div>
+  </div>
+</section>
+
+
+<!-- FAMILY 10 -->
+<section class="card">
+  <h2>Monitoring and Observability</h2>
+
+
+
+
+  <div class="family-grid">
+    <div class="mini-project">
+      <h3>Infrastructure Health Monitoring</h3>
+      <p>Monitoring system that tracks CPU, memory, disk, and network metrics across all infrastructure nodes.</p>
+      <img src="imagenes/11.png" class="thumb" alt="project A">
+    </div>
+
+
+
+
+    <div class="mini-project">
+      <h3>Service Availability Reports</h3>
+      <p>Automated reports providing historical availability and downtime statistics for critical services.</p>
+      <img src="imagenes/6.png" class="thumb" alt="project A">
+    </div>
+  </div>
+</section>
+
+
+<!-- FAMILY 11 -->
+<section class="card">
+  <h2>Identity and Access Management</h2>
+
+
+
+
+  <div class="family-grid">
+    <div class="mini-project">
+      <h3>Centralized User Authentication</h3>
+      <p>Central authentication system to manage user identities and access across multiple platforms.</p>
+      <img src="imagenes/18.png" class="thumb" alt="project A">
+    </div>
+
+
+
+
+    <div class="mini-project">
+      <h3>Role-Based Access Control</h3>
+      <p>Implementation of role-based permissions to enforce least-privilege access policies.</p>
+      <img src="imagenes/13.png" class="thumb" alt="project A">
+    </div>
+  </div>
+</section>
+
+
+<!-- FAMILY 12 -->
+<section class="card">
+  <h2>DevOps and CI/CD Foundations</h2>
+
+
+
+
+  <div class="family-grid">
+    <div class="mini-project">
+      <h3>Continuous Deployment Pipeline</h3>
+      <p>Basic CI/CD pipeline that automates application deployment after code changes.</p>
+      <img src="imagenes/2.png" class="thumb" alt="project A">
+    </div>
+
+
+
+
+    <div class="mini-project">
+      <h3>Automated Testing Workflow</h3>
+      <p>Automated testing process integrated into the deployment pipeline to ensure application stability.</p>
+      <img src="imagenes/6.png" class="thumb" alt="project A">
+    </div>
+  </div>
+</section>
+
 
 </main>
 
+
 <footer class="footer">
-  <div class="footer-info">
-    <div>© 2026</div>
-    <div>Piero Ycaza</div>
-    <div>All rights reserved</div>
-  </div>
+<div class="footer-info">
+  <div>© 2026</div>
+  <div>Piero Ycaza</div>
+  <div>All rights reserved</div>
+</div>
 </footer>
+
+
 
 
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
